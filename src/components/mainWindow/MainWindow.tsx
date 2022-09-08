@@ -1,0 +1,21 @@
+import * as React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import AboutWindow from './aboutWindow/AboutWindow';
+import ContactWindow from './contactWindow/ContactWindow';
+import './MainWindow.css';
+import ProjectsWindow from './projectsWindow/ProjectsWindow';
+import ResumeWindow from './resumeWindow/ResumeWindow';
+function MainWindow() {
+    return (
+        <main>
+            <Routes>
+                <Route path='/' element={<AboutWindow />}></Route>
+                <Route path='/projects' element={<ProjectsWindow />}></Route>
+                <Route path='/resume' element={<ResumeWindow />}></Route>
+                <Route path='/contact' element={<ContactWindow />}></Route>
+            </Routes>
+        </main>
+    );
+}
+
+export default MainWindow;
