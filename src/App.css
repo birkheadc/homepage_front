@@ -12,22 +12,21 @@
 
 
 :root {
-  --clr-text-primary: #FFC2CB;
-  --clr-text-secondary: #EFF1F3;
-
-  --clr-text-dark: #0D160B;
+  --clr-text-primary-dark: #FFC2CB;
+  --clr-text-primary-light: #4A4C4C;
   
-  --clr-bg-primary: #021420;
-  --clr-bg-secondary: #21201C;
+  --clr-bg-primary-dark: #021420;
+  --clr-bg-primary-light: #F8FFEF;
 
-  --clr-primary: #C73A6B;
-  --clr-secondary: #057694;
+  --clr-primary-dark: #C73A6B;
+  --clr-primary-light: #BCBE52;
+  --clr-secondary-dark: #057694;
+  --clr-secondary-light: #D8CCB9;
 
-  --clr-accent: #FFBA08;
-  --clr-dark-accent: #58355E;
+  --clr-accent-dark: #FFBA08;
+  --clr-accent-light: #B497D6;
 
   --clr-border-primary: #02020A;
-  --clr-border-secondary: #1B2D36;
 
   --clr-translucent-none: rgba(0, 0, 0, 0.0);
   --clr-translucent-light: rgba(0, 0, 0, 0.3);
@@ -45,8 +44,52 @@
   --width-main: 45%;
   --width-left-column: min(20%, 13em);
 
+  --img-bg-dark: linear-gradient(90deg, transparent 0%, var(--clr-bg-primary) 30%, var(--clr-bg-primary) 75%, transparent 100%), url('../public/background/background_h.jpg');
+  --img-bg-light: linear-gradient(90deg, transparent 0%, var(--clr-bg-primary) 30%, var(--clr-bg-primary) 75%, transparent 100%), url('../public/background/background_l.jpg');
+
   font-size: 1.25rem;
 }
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --clr-text-primary: var(--clr-text-primary-light);
+    --clr-bg-primary: var(--clr-bg-primary-light);
+    --clr-accent: var(--clr-accent-light);
+    --clr-primary: var(--clr-primary-light);
+    --clr-secondary: var(--clr-secondary-light);
+    --img-bg: var(--img-bg-light);
+  }
+}
+
+[color-scheme='light'] {
+  --clr-text-primary: var(--clr-text-primary-light);
+  --clr-bg-primary: var(--clr-bg-primary-light);
+  --clr-accent: var(--clr-accent-light);
+  --clr-primary: var(--clr-primary-light);
+  --clr-secondary: var(--clr-secondary-light);
+  --img-bg: var(--img-bg-light);
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --clr-text-primary: var(--clr-text-primary-dark);
+    --clr-bg-primary: var(--clr-bg-primary-dark);
+    --clr-accent: var(--clr-accent-dark);
+    --clr-primary: var(--clr-primary-dark);
+    --clr-secondary: var(--clr-secondary-dark);
+    --img-bg: var(--img-bg-dark);
+  }
+}
+
+[color-scheme='dark'] {
+  --clr-text-primary: var(--clr-text-primary-dark);
+  --clr-bg-primary: var(--clr-bg-primary-dark);
+  --clr-accent: var(--clr-accent-dark);
+  --clr-primary: var(--clr-primary-dark);
+  --clr-secondary: var(--clr-secondary-dark);
+  --img-bg: var(--img-bg-dark);
+}
+
 
 html, body, nav, main, ul, h1, h2, h3, h4, h5, h6, p {
   padding: 0;
@@ -73,7 +116,7 @@ html {
   color: var(--clr-text-primary);
   background-color: var(--clr-bg-primary);
   /* background-image: linear-gradient(to right, transparent, var(--clr-bg-primary) 550px), url('../public/backgrounds/background.jpg'); */
-  background-image: linear-gradient(90deg, transparent 0%, var(--clr-bg-primary) 30%, var(--clr-bg-primary) 75%, transparent 100%), url('../public/background/background_h.jpg'); 
+  background-image: var(--img-bg); 
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
