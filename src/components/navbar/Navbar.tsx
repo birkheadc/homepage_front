@@ -1,14 +1,22 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-function Navbar() {
+
+interface NavbarProps {
+    handleChangeTheme(): void
+}
+
+function Navbar(props:NavbarProps) {
     return (
         <nav>
+            <a href='#'><img alt='icon' src={ process.env.PUBLIC_URL + '/favicon.ico'}></img></a>
             <ul>
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/projects'>Projects</NavLink></li>
-                <li><NavLink to='/contact'>Contact</NavLink></li>
-                <li><NavLink to='/resume'>Resume</NavLink></li>
+                <li><NavLink className='nav-link' to='/'>Home</NavLink></li>
+                <a className='nav-link'>Blog</a>
+                <li><NavLink className='nav-link' to='/projects'>Projects</NavLink></li>
+                <li><NavLink className='nav-link' to='/contact'>Contact</NavLink></li>
+                <li><NavLink className='nav-link' to='/resume'>Résumé</NavLink></li>
+                <button onClick={props.handleChangeTheme}>Theme</button>
             </ul>
         </nav>
      );

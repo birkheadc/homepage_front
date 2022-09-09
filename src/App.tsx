@@ -8,13 +8,19 @@ import Navbar from './components/navbar/Navbar';
 
 function App() {
 
+  function handleChangeTheme():void {
+    console.log("Change theme now.");
+  }
+
   return(
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar handleChangeTheme={handleChangeTheme}/>
         <div>
-          <ActivityFeed />
-          <ContactMeBox />
+          <div className='left-column-wrapper'>
+            <ActivityFeed />
+            <ContactMeBox />
+          </div>
           <MainWindow />
         </div>
       </BrowserRouter>

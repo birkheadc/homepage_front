@@ -1,4 +1,42 @@
 nav {
-    background-color: red;
-    width: 100;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5em 3em;
+
+    background: linear-gradient(to right, var(--clr-translucent-none) 0%, var(--clr-translucent-light-medium) 60%, var(--clr-translucent-light-medium));
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+nav li {
+    display: contents;
+    text-align: center;
+}
+
+.nav-link {
+    box-sizing: border-box;
+    border: var(--clr-translucent-none) solid 2px;
+    padding: 0.3em;
+    white-space: nowrap;
+    margin: 0;
+    border-radius: var(--roundness-more);
+    font-family: 'Barriecito', serif;
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: var(--clr-translucent-medium);
+    border: var(--clr-secondary) solid 2px;
+  }
