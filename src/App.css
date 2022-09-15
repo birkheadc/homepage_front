@@ -47,6 +47,9 @@
   --img-bg-dark: linear-gradient(90deg, transparent 0%, var(--clr-bg-primary) 30%, var(--clr-bg-primary) 75%, transparent 100%), url('../public/background/background_h.jpg');
   --img-bg-light: linear-gradient(90deg, transparent 0%, var(--clr-bg-primary) 30%, var(--clr-bg-primary) 75%, transparent 100%), url('../public/background/background_l.jpg');
 
+  --img-bg-dark-mobile: linear-gradient(180deg, transparent 0%, var(--clr-bg-primary) 20%), url('../public/background/background_h.jpg');
+  --img-bg-light-mobile: linear-gradient(180deg, transparent 0%, var(--clr-bg-primary) 20%), url('../public/background/background_l.jpg');
+
   font-size: 1.25rem;
 }
 
@@ -115,7 +118,6 @@ html {
   scroll-behavior: smooth;
   color: var(--clr-text-primary);
   background-color: var(--clr-bg-primary);
-  /* background-image: linear-gradient(to right, transparent, var(--clr-bg-primary) 550px), url('../public/backgrounds/background.jpg'); */
   background-image: var(--img-bg); 
   background-size: cover;
   background-attachment: fixed;
@@ -170,4 +172,15 @@ p {
   border: var(--clr-border-primary) solid 3px;
   border-radius: var(--roundness-standard);
   padding: 1em;
+}
+
+@media(max-width: 70em) {
+
+  :root {
+    --img-bg: var(--img-bg-dark-mobile);
+  }
+
+  .left-column-wrapper {
+    display: none;
+  }
 }
