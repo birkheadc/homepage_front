@@ -76,6 +76,14 @@ I'm working on learning how to do better exporting and importing, keeping the so
 The pattern I've decided on is to group related functions into one file, then box them into one object, and export only that object, like:
 
 ```
+function getLanguages() {
+...
+}
+
+function handleChangeLanguage() {
+...
+}
+
 const Language {
     getLanguages,
     handleChangeLanguage
