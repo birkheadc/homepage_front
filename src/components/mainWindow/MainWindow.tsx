@@ -3,12 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import AboutWindow from './aboutWindow/AboutWindow';
 import ContactWindow from './contactWindow/ContactWindow';
 import './MainWindow.css';
+import { MainWindowProps } from './MainWindowProps';
 import ProjectsWindow from './projectsWindow/ProjectsWindow';
 import ResumeWindow from './resumeWindow/ResumeWindow';
-
-interface MainWindowProps {
-    language: string
-}
 
 function MainWindow(props: MainWindowProps) {
     return (
