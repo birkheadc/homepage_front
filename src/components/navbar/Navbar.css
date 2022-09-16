@@ -40,3 +40,20 @@ nav li {
     background-color: var(--clr-translucent-medium);
     border: var(--clr-secondary) solid 2px;
   }
+
+  /* Change the link to a new color, and make it appear to not react to hovering or clicking.  */
+  .active-nav-link, .active-nav-link:hover, .active-nav-link:focus {
+    color: var(--clr-accent);
+    border-color: transparent;
+    background-color: transparent;
+    cursor:default;
+    transform: scale(1, 1);
+  }
+
+  .fav-icon {
+    border-radius: 1rem;
+  }
+
+  .fav-icon:hover {
+    background-color: var(--clr-accent);
+  }

@@ -18,13 +18,13 @@ function Navbar(props: NavbarProps) {
 
     return (
         <nav>
-            <a href='#'><img alt='icon' src={ process.env.PUBLIC_URL + '/favicon.ico'}></img></a>
+            <a href='#'><img alt='icon' className='fav-icon' src={ process.env.PUBLIC_URL + '/favicon.ico'}></img></a>
             <ul>
-                <li><NavLink className='nav-link' to='/'>Home</NavLink></li>
-                <a className='nav-link'>Blog</a>
-                <li><NavLink className='nav-link' to='/projects'>Projects</NavLink></li>
-                <li><NavLink className='nav-link' to='/contact'>Contact</NavLink></li>
-                <li><NavLink className='nav-link' to='/resume'>Résumé</NavLink></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} to='/'>Home</NavLink></li>
+                <a className='nav-link' href='https://blog.birkheadc.me' target="_blank">Blog</a>
+                <li><NavLink className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} to='/projects'>Projects</NavLink></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} to='/contact'>Contact</NavLink></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} to='/resume'>Résumé</NavLink></li>
                 <button onClick={Theme.handleChangeTheme}>Theme</button>
                 <select onChange={handleChangeLanguage}>
                     {Language.getLanguages().map(

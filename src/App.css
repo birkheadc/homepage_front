@@ -19,9 +19,9 @@
   --clr-bg-primary-light: #F8FFEF;
 
   --clr-primary-dark: #C73A6B;
-  --clr-primary-light: #BCBE52;
+  --clr-primary-light: #D8CCB9;
   --clr-secondary-dark: #057694;
-  --clr-secondary-light: #D8CCB9;
+  --clr-secondary-light: #BCBE52;
 
   --clr-accent-dark: #FFBA08;
   --clr-accent-light: #B497D6;
@@ -99,6 +99,10 @@ html, body, nav, main, ul, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
   color: var(--clr-primary);
@@ -165,10 +169,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  width: 300px;
 }
 
-.left-column-wrapper div {
-  background-color: var(--clr-translucent-light);
+.left-column-wrapper>div {
+  background-color: var(--clr-translucent-medium);
   border: var(--clr-border-primary) solid 3px;
   border-radius: var(--roundness-standard);
   padding: 1em;

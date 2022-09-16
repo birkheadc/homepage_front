@@ -1,0 +1,16 @@
+.socials-ul {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 1em;
+}
+
+.social-icon {
+    max-width: 2rem;
+    border-radius: 1rem;
+}
+
+.social-icon:hover {
+    background-color: var(--clr-accent);
+}

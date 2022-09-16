@@ -11,3 +11,5 @@
 - Make sure the background image looks nice in mobile.
 
 - Set up the mobile version of the navbar.
+
+- Look into whether the facebook link I am using is the link I should be using

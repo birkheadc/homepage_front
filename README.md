@@ -89,3 +89,19 @@ This way, the functions can be called via `Language.getLanguages()`, which also 
 I'm not sure how much of this is "Yes this is how everyone else does JavaScript, congratulations." and how much of it is "You are doing this all wrong."
 
 Either way, this is how I am doing it for now.
+
+## Font Awesome
+
+This project uses Font Awesome for its icons. These icons act as text to the browser, making them easy to style. In order to use Font Awesome, it must be declared as a script in the `<head>` of `index.html`, like so:
+
+```
+    <script src="https://kit.fontawesome.com/f3565d31ff.js" crossorigin="anonymous"></script>
+```
+
+Then, icons should be searched for on [fontawesome.com](https://fontawesome.com). This will yield the code to generate the icon, which should look something like this:
+
+```
+<i class="fa-solid fa-copy"></i>
+```
+
+Simply include this html element and the icon should appear. (Make sure to replace `class` with `className` in React)
