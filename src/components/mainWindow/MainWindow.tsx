@@ -5,11 +5,16 @@ import ContactWindow from './contactWindow/ContactWindow';
 import './MainWindow.css';
 import ProjectsWindow from './projectsWindow/ProjectsWindow';
 import ResumeWindow from './resumeWindow/ResumeWindow';
-function MainWindow() {
+
+interface MainWindowProps {
+    language: string
+}
+
+function MainWindow(props: MainWindowProps) {
     return (
         <main>
             <Routes>
-                <Route path='/' element={<AboutWindow />}></Route>
+                <Route path='/' element={<AboutWindow language={props.language}/>}></Route>
                 <Route path='/projects' element={<ProjectsWindow />}></Route>
                 <Route path='/resume' element={<ResumeWindow />}></Route>
                 <Route path='/contact' element={<ContactWindow />}></Route>

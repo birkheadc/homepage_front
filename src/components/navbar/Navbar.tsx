@@ -4,11 +4,16 @@ import Language from '../../settings/language/Language';
 import Theme from '../../settings/theme/Theme';
 import './Navbar.css';
 
-function Navbar() {
+interface NavbarProps {
+    handleChangeLanguage(lang: string): void,
+    language: string
+}
+
+function Navbar(props: NavbarProps) {
 
     const handleChangeLanguage = (e: React.ChangeEvent<{ value: string}>): void => {
         const code: string = e.target.value;
-        Language.handleChangeLanguage(code);
+        props.handleChangeLanguage(code);
     }
 
     return (

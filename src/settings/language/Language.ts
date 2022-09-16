@@ -17,6 +17,7 @@ function handleChangeLanguage(code: string): void {
     const language: string | undefined = getLanguages().find(l => l.code === code)?.label;
     if (language) {
       console.log("Change language to: " + language);
+      document.documentElement.lang = code;
     }
   }
 

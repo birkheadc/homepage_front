@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { fileURLToPath } from 'url';
 import './App.css';
 import ActivityFeed from './components/activityFeed/ActivityFeed';
 import ContactMeBox from './components/contactMeBox/ContactMeBox';
@@ -11,18 +10,26 @@ import Theme from './settings/theme/Theme';
 
 function App() {
 
+  // #region Language Settings
+  const [language, setLanguage] = useState<string>(document.documentElement.lang);
+  const handleChangeLanguage = (lang: string):void => {
+    setLanguage(lang);
+    Language.handleChangeLanguage(lang);
+  }
+  // #endregion
+
   Theme.loadTheme();
 
   return(
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar handleChangeLanguage={handleChangeLanguage} language={language}/>
         <div>
           <div className='left-column-wrapper'>
             <ActivityFeed />
             <ContactMeBox />
           </div>
-          <MainWindow />
+          <MainWindow language={language}/>
         </div>
       </BrowserRouter>
     </div>
