@@ -57,7 +57,7 @@ const handleChangeTheme = (): void => {
 <button onClick={Theme.handleChangeTheme}>Theme</button>
 ```
 
-At first glance this seems like just a move convoluted way of doing the same thing, and it does make the code a bit less concise. But it has two benefits:
+At first glance this seems like just a more convoluted way of doing the same thing, and it does make the code a bit less concise. But it has two benefits:
 - Easier to update later. If I want to change what happens when clicking the button -- maybe to add a sound effect-- I can just update the handleChangeTheme function.
 - Removes autonomy from a simple button, which probably shouldn't be calling random functions willy-nilly.
 
