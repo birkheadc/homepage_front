@@ -4,12 +4,18 @@
     - I'm not sure if this build will need them
     - Something went wrong when I tried to install the package
 
-- Does NavLink have some sort of `activeClass` / `nonActiveClass` like I'm seeing on the HashLink page? That would make it really easy to, say, highlight the page I'm currently on. On my other app I'm using javascript to do that...
-
-- Figure out how to do a light / dark theme with a different color scheme and different background image.
-
 - Make sure the background image looks nice in mobile.
 
 - Set up the mobile version of the navbar.
 
 - Look into whether the facebook link I am using is the link I should be using
+
+- Make a footer with my socials on it.
+
+- Make the drop-down menus for blog, projects, and contacts
+
+- Write each page's content.
+
+- Build the api for blog, projects, and activity feed.
+
+- Change the style of the theme and language buttons.

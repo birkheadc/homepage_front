@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import ActivityFeed from './components/activityFeed/ActivityFeed';
 import ContactMeBox from './components/contactMeBox/ContactMeBox';
+import Footer from './components/footer/Footer';
 import MainWindow from './components/mainWindow/MainWindow';
 import Navbar from './components/navbar/Navbar';
 import Language from './settings/language/Language';
@@ -21,7 +22,7 @@ function App() {
   Theme.loadTheme();
 
   return(
-    <div>
+    <div className='app-wrapper'>
       <BrowserRouter>
         <Navbar handleChangeLanguage={handleChangeLanguage} language={language}/>
         <div>
@@ -32,6 +33,7 @@ function App() {
           <MainWindow language={language}/>
         </div>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

@@ -180,6 +180,13 @@ p {
   padding: 1em;
 }
 
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media(max-width: 70em) {
 
   :root {

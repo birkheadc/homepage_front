@@ -6,11 +6,15 @@
     gap: 1em;
 }
 
-.social-icon {
+.social-icon>img {
     max-width: 2rem;
     border-radius: 1rem;
+    border-style: solid;
+    border-color: var(--clr-translucent-heavy);
+    border-width: 1px;
 }
 
-.social-icon:hover {
-    background-color: var(--clr-accent);
+.social-icon:hover>img {
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
 }
