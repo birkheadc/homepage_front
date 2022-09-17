@@ -18,3 +18,7 @@
     background-color: var(--clr-secondary);
     border-color: var(--clr-secondary);
 }
+
+.social-icon:active>img {
+    transform: scale(0.9, 0.9);
+}
