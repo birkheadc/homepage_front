@@ -1,0 +1,19 @@
+footer {
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    width: fit-content;
+}
+
+footer hr {
+    color: var(--clr-accent);
+}
+
+footer>.socials-ul {
+    padding: 0 2rem;
+}
+
+footer .social-icon>img {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+}

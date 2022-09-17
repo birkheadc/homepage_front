@@ -18,7 +18,7 @@ function Navbar(props: NavbarProps) {
 
     return (
         <nav>
-            <a href='#'><img alt='icon' className='fav-icon' src={ process.env.PUBLIC_URL + '/favicon.ico'}></img></a>
+            <a className='fav-icon' href='#'><img alt='icon' src={ process.env.PUBLIC_URL + '/favicon.ico'}></img></a>
             <ul>
                 <li><NavLink className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} to='/'>Home</NavLink></li>
                 <a className='nav-link' href='https://blog.birkheadc.me' target="_blank">Blog</a>
