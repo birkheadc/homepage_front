@@ -19,7 +19,8 @@ function handleChangeTheme(): void {
 
   const Theme = {
     handleChangeTheme,
-    loadTheme
+    loadTheme,
+    getCurrentTheme
   }
 
   export default Theme;

@@ -113,3 +113,15 @@ Then, icons should be searched for on [fontawesome.com](https://fontawesome.com)
 ```
 
 Simply include this html element and the icon should appear. (Make sure to replace `class` with `className` in React)
+
+## Environment Variables
+
+The following environment variables are required:
+
+```
+REACT_APP_PROJECTS_URL={https://projects.birkheadc.me}
+```
+
+Curly braces represent examples, but are also probably the correct value unless I've changed something.
+
+In development, (maybe production, haven't looked into it yet), these variables can be declared by creating a file named `.env` in the root folder, and simply adding lines with the above syntax.

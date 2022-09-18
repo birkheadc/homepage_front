@@ -1,0 +1,16 @@
+.nav-dropdown {
+    background-color: var(--clr-translucent-medium);
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: var(--clr-translucent-light);
+
+    width: 500px;
+    right: 0;
+
+    position: fixed;
+
+    margin-right: 20px;
+    padding: 1em 2em;
+
+    border-radius: 0 0 1em 1em;
+}

@@ -10,12 +10,12 @@
 
 - Look into whether the facebook link I am using is the link I should be using
 
-- Make a footer with my socials on it.
-
 - Make the drop-down menus for blog, projects, and contacts
 
 - Write each page's content.
 
 - Build the api for blog, projects, and activity feed.
 
-- Change the style of the theme and language buttons.
+- Add japanese fonts
+
+- Build LOADING screen
