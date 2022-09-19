@@ -13,8 +13,14 @@ export interface IProject {
     source: string
 }
 
+export interface IActivity {
+    date: Date,
+    content: IDescription[];
+}
+
 export class AppData {
     private _projects: IProject[] = [];
+    private _activities: IActivity[] = [];
 
     addProject(project: IProject): void {
         this._projects.push(project);
@@ -26,7 +32,21 @@ export class AppData {
         });
     }
 
+    addActivity(activity: IActivity): void {
+        this._activities.push(activity);
+    }
+
+    addActivities(activities: IActivity[]): void {
+        activities.forEach(activity => {
+            this.addActivity(activity);
+        });
+    }
+
     get projects(): IProject[] {
         return this._projects;
+    }
+
+    get activities(): IActivity[] {
+        return this._activities;
     }
 }

@@ -61,13 +61,14 @@ function App() {
         <Navbar handleChangeLanguage={handleChangeLanguage} language={language} handleChangeTheme={handleChangeTheme} theme={theme} projectsPreview={<ProjectsPreview language={language} projects={appData.projects}/>} blogsPreview={<BlogsPreview />}/>
         <div>
           <div className='left-column-wrapper'>
-            <ActivityFeed />
+            <ActivityFeed language={language} activities={appData.activities}/>
             <ContactMeBox />
           </div>
-          <MainWindow language={language}/>
+          <MainWindow language={language} projects={appData.projects}/>
         </div>
+        <Footer />
       </BrowserRouter>
-      <Footer />
+
     </div>
   );
 }

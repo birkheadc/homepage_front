@@ -5,7 +5,7 @@ footer {
     width: fit-content;
 }
 
-footer hr {
+hr {
     color: var(--clr-accent);
 }
 

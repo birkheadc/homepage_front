@@ -1,10 +1,13 @@
 import * as React from 'react';
-import { MainWindowProps } from '../MainWindowProps';
 import { AboutContentEn } from './aboutContent/AboutContentEn';
 import { AboutContentJp } from './aboutContent/AboutContentJp';
 import './AboutWindow.css';
 
-function AboutWindow(props: MainWindowProps) {
+interface AboutWindowProps {
+    language: string
+}
+
+function AboutWindow(props: AboutWindowProps) {
 
     const contentDictionary = {
         '': <div></div>,
@@ -17,7 +20,11 @@ function AboutWindow(props: MainWindowProps) {
     }
 
     return (
-        getContent()
+        <div>
+            <h1>ABOUT ME</h1>
+            <hr></hr>
+            {getContent()}
+        </div>
     );
 }
 

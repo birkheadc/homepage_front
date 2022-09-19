@@ -2,7 +2,6 @@ import * as React from 'react';
 export function AboutContentJp() {
     return (
         <div>
-            <h1>ABOUT ME</h1>
             <p>日本語の文章</p>
             <p>日本語の文章</p>
             <p>日本語の文章</p>

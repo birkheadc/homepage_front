@@ -10,8 +10,6 @@
 
 - Look into whether the facebook link I am using is the link I should be using
 
-- Make the drop-down menus for blog, projects, and contacts
-
 - Write each page's content.
 
 - Build the api for blog, projects, and activity feed.
@@ -19,3 +17,5 @@
 - Add japanese fonts
 
 - Build LOADING screen
+
+- In ProjectsPreview.tsx, when technologies overflows the box, I want it to scroll!

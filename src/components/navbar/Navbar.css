@@ -49,7 +49,6 @@ nav li {
     color: var(--clr-accent);
     border-color: transparent;
     background-color: transparent;
-    cursor:default;
     transform: scale(1, 1);
   }
 
