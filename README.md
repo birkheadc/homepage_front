@@ -124,4 +124,10 @@ REACT_APP_PROJECTS_URL={https://projects.birkheadc.me}
 
 Curly braces represent examples, but are also probably the correct value unless I've changed something.
 
-In development, (maybe production, haven't looked into it yet), these variables can be declared by creating a file named `.env` in the root folder, and simply adding lines with the above syntax.
+In development, these variables can be declared by creating a file named `.env` in the root folder, and simply adding lines with the above syntax.
+
+In production, they should be declared in Dockerfil like so:
+
+```
+ENV REACT_APP_PROJECTS_URL https://api.url
+```
