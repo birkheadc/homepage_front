@@ -88,7 +88,7 @@ function Navbar(props: NavbarProps) {
                     <a data-dropdown='blogsPreview' className='nav-link' href='https://blog.birkheadc.me' onMouseOver={handleChangeDropdown} target="_blank" rel="noreferrer">Blog</a>
                     <li><NavLink data-dropdown='projectsPreview' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onMouseOver={handleChangeDropdown} to='/projects'>Projects</NavLink></li>
                     <li><NavLink data-dropdown='contactMe' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onMouseOver={handleChangeDropdown} to='/contact'>Contact</NavLink></li>
-                    <li><a data-dropdown='' className='nav-link' href='' onMouseOver={handleChangeDropdown} target="_blank" rel="noreferrer">Résumé</a></li>
+                    <li><a data-dropdown='' className='nav-link' href='/resume/resume_en_swe.pdf' onMouseOver={handleChangeDropdown} target="_blank" rel="noreferrer">Résumé</a></li>
                     <button className='change-theme-button' onClick={props.handleChangeTheme} title='Change Theme'>{getThemeButtonIcon(props.theme)}</button>
                     <div className='change-language-wrapper'>
                         <i className="fa-solid fa-globe"></i>

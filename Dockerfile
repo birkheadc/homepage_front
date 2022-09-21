@@ -2,6 +2,7 @@
 FROM node:18-alpine3.15 as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
+ENV REACT_APP_PROJECTS_URL https://projects.birkheadc.me
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm ci
