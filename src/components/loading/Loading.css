@@ -1,0 +1,9 @@
+.loading-wrapper {
+  width: 100%;
+  margin: 200px auto;
+  text-align: center;
+}
+
+.loading-wrapper h1 {
+  font-size: 2rem;
+}

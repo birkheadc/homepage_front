@@ -22,3 +22,8 @@
 .social-icon:active>img {
     transform: scale(0.9, 0.9);
 }
+
+main .social-icon>img {
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}

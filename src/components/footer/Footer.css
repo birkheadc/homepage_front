@@ -5,10 +5,6 @@ footer {
     width: fit-content;
 }
 
-hr {
-    color: var(--clr-accent);
-}
-
 footer>.socials-ul {
     padding: 0 2rem;
 }

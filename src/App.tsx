@@ -6,6 +6,7 @@ import './App.css';
 import ActivityFeed from './components/activityFeed/ActivityFeed';
 import ContactMeBox from './components/contactMeBox/ContactMeBox';
 import Footer from './components/footer/Footer';
+import Loading from './components/loading/Loading';
 import MainWindow from './components/mainWindow/MainWindow';
 import BlogsPreview from './components/navbar/blogsPreview/BlogsPreview';
 import Navbar from './components/navbar/Navbar';
@@ -48,17 +49,27 @@ function App() {
   }
   // #endregion
 
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const MOBILE_WIDTH = 800;
+
+  React.useEffect(() => {
+    const handleResize = () => {
+        setWidth(window.innerWidth);
+        console.log(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+})
+
   if (isLoading === true) {
     return (
-      <div>
-        LOADING
-      </div>
+      <Loading />
     );
   }
+
   return(
-    <div className='app-wrapper'>
+    <div className='app-wrapper' id='app-wrapper'>
       <BrowserRouter>
-        <Navbar handleChangeLanguage={handleChangeLanguage} language={language} handleChangeTheme={handleChangeTheme} theme={theme} projectsPreview={<ProjectsPreview language={language} projects={appData.projects}/>} blogsPreview={<BlogsPreview />}/>
+        <Navbar isMobile={width <= MOBILE_WIDTH} handleChangeLanguage={handleChangeLanguage} language={language} handleChangeTheme={handleChangeTheme} theme={theme} projectsPreview={<ProjectsPreview language={language} projects={appData.projects}/>} blogsPreview={<BlogsPreview />}/>
         <div>
           <div className='left-column-wrapper'>
             <ActivityFeed language={language} activities={appData.activities}/>

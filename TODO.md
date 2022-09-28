@@ -4,18 +4,12 @@
     - I'm not sure if this build will need them
     - Something went wrong when I tried to install the package
 
-- Make sure the background image looks nice in mobile.
-
-- Set up the mobile version of the navbar.
-
-- Look into whether the facebook link I am using is the link I should be using
-
 - Write each page's content.
 
-- Build the api for blog, projects, and activity feed.
+- Build the api for blog and activity feed.
 
 - Add japanese fonts
 
-- Build LOADING screen
-
 - In ProjectsPreview.tsx, when technologies overflows the box, I want it to scroll!
+
+- Add link to resume on resume page, maybe automatically generate the resume when the app is built?

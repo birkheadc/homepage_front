@@ -198,13 +198,33 @@ p {
   justify-content: space-between;
 }
 
-@media(max-width: 70em) {
+@media(max-width: 800px) {
 
-  :root {
+  @media(prefers-color-scheme: light) {
+    :root {
+      --img-bg: var(--img-bg-light-mobile);
+    }
+  }
+
+  [color-scheme='light'] {
+    --img-bg: var(--img-bg-light-mobile);
+  }
+
+  @media(prefers-color-scheme: dark) {
+    :root {
+      --img-bg: var(--img-bg-dark-mobile);
+    }
+  }
+
+  [color-scheme='dark'] {
     --img-bg: var(--img-bg-dark-mobile);
   }
 
   .left-column-wrapper {
     display: none;
+  }
+
+  .app-wrapper {
+    min-height: 90vh;
   }
 }
