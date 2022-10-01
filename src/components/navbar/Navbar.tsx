@@ -137,7 +137,6 @@ function Navbar(props: NavbarProps) {
   }
 
   const handleToggleNav = (): void => {
-    console.log("toggle");
     setActive(!isActive);
   }
 

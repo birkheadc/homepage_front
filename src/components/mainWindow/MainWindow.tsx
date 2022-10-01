@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { IProject } from '../../api/AppData';
+import { IBlurb, IProject } from '../../api/AppData';
 import AboutWindow from './aboutWindow/AboutWindow';
 import BlogWindow from './blogWindow/BlogWindow';
 import ContactWindow from './contactWindow/ContactWindow';
@@ -9,6 +9,7 @@ import ProjectsWindow from './projectsWindow/ProjectsWindow';
 import ResumeWindow from './resumeWindow/ResumeWindow';
 
 interface MainWindowProps {
+    blurbs: IBlurb[],
     language: string,
     projects: IProject[]
 }
@@ -18,7 +19,7 @@ function MainWindow(props: MainWindowProps) {
         <main id="main">
             <Routes>
                 <Route path='/' element={<AboutWindow language={props.language}/>}></Route>
-                <Route path='/blog' element={<BlogWindow language={props.language}/>}></Route>
+                <Route path='/blog' element={<BlogWindow blurbs={props.blurbs} language={props.language}/>}></Route>
                 <Route path='/projects' element={<ProjectsWindow language={props.language} projects={props.projects}/>}></Route>
                 <Route path='/contact' element={<ContactWindow />}></Route>
                 <Route path='/resume' element={<ResumeWindow language={props.language}/>}></Route>

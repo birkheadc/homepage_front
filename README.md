@@ -120,6 +120,7 @@ The following environment variables are required:
 
 ```
 REACT_APP_PROJECTS_URL={https://projects.birkheadc.me}
+REACT_APP_BLOG_URL={https://blog.birkheadc.me}
 ```
 
 Curly braces represent examples, but are also probably the correct value unless I've changed something.

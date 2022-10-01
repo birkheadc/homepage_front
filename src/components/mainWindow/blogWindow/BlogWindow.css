@@ -1,8 +1,47 @@
-.blog-window-wrapper {
-  padding-top: 3rem;
-  text-align: center;
+.blog-window-wrapper hr {
+  width: 100%;
+}
+
+.blog-window-wrapper .nav-link {
+  font-size: 1.3rem;
 }
 
 .blog-window-wrapper a {
   font-size: 2rem;
+}
+
+.blurb-window-individual-title {
+  text-align: left;
+}
+
+.blog-window-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blurbs-window-individual-wrapper a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+}
+
+.blurbs-window-individual-wrapper h4 {
+  text-align: left;
+}
+
+.blurbs-window-individual-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  padding: 0.5em 1em;
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1em;
+  border-color: var(--clr-accent);
+}
+
+.blurbs-window-individual-wrapper p {
+  color: var(--clr-text-primary-dark);
 }

@@ -37,8 +37,8 @@ function App() {
   const [appData, setAppData] = useState<AppData>(new AppData());
   async function fetchData(): Promise<void> {
     let data = await Api.fetchAppData();
-    setAppData(data);
     setLoading(false);
+    setAppData(data);
   }
   // #endregion
 
@@ -55,7 +55,6 @@ function App() {
   React.useEffect(() => {
     const handleResize = () => {
         setWidth(window.innerWidth);
-        console.log(window.innerWidth);
     }
     window.addEventListener('resize', handleResize);
 })
@@ -69,13 +68,13 @@ function App() {
   return(
     <div className='app-wrapper' id='app-wrapper'>
       <BrowserRouter>
-        <Navbar isMobile={width <= MOBILE_WIDTH} handleChangeLanguage={handleChangeLanguage} language={language} handleChangeTheme={handleChangeTheme} theme={theme} projectsPreview={<ProjectsPreview language={language} projects={appData.projects}/>} blogsPreview={<BlogsPreview />}/>
+        <Navbar isMobile={width <= MOBILE_WIDTH} handleChangeLanguage={handleChangeLanguage} language={language} handleChangeTheme={handleChangeTheme} theme={theme} projectsPreview={<ProjectsPreview language={language} projects={appData.projects}/>} blogsPreview={<BlogsPreview blurbs={appData.blurbs}/>}/>
         <div>
           <div className='left-column-wrapper'>
             <ActivityFeed language={language} activities={appData.activities}/>
             <ContactMeBox />
           </div>
-          <MainWindow language={language} projects={appData.projects}/>
+          <MainWindow blurbs={appData.blurbs} language={language} projects={appData.projects}/>
         </div>
         <Footer />
       </BrowserRouter>

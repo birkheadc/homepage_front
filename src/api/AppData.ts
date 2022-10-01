@@ -13,6 +13,13 @@ export interface IProject {
     source: string
 }
 
+export interface IBlurb {
+  id: number,
+  title: string,
+  sub_title: string,
+  created: Date
+}
+
 export interface IActivity {
     date: Date,
     content: IDescription[];
@@ -21,6 +28,7 @@ export interface IActivity {
 export class AppData {
     private _projects: IProject[] = [];
     private _activities: IActivity[] = [];
+    private _blurbs: IBlurb[] =[];
 
     addProject(project: IProject): void {
         this._projects.push(project);
@@ -42,11 +50,25 @@ export class AppData {
         });
     }
 
+    addBlurb(blurb: IBlurb): void {
+      this._blurbs.push(blurb);
+    }
+
+    addBlurbs(blurbs: IBlurb[]): void {
+      blurbs.forEach(blurb => {
+        this.addBlurb(blurb);
+      });
+    }
+
     get projects(): IProject[] {
         return this._projects;
     }
 
     get activities(): IActivity[] {
         return this._activities;
+    }
+
+    get blurbs(): IBlurb[] {
+      return this._blurbs;
     }
 }

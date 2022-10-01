@@ -33,8 +33,8 @@ function ProjectsPreview(props: ProjectsPreviewProps) {
                             )}
                         </ul>
                         <div className='projects-preview-links-wrapper'>
-                            <a href={project.site} target='_blank'>Site Home</a>
-                            <a href={project.source} target='_blank'>Source Code</a>
+                            <a href={project.site} target='_blank' rel='noreferrer'>Site Home</a>
+                            <a href={project.source} target='_blank' rel='noreferrer'>Source Code</a>
                         </div>
                     </div>
                 )}
