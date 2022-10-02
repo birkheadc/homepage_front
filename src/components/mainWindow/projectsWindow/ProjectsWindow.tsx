@@ -60,7 +60,7 @@ function ProjectsWindow(props: ProjectsWindowProps) {
 
     return (
         <div className='projects-window-wrapper'>
-            <h1>MY PROJECTS</h1>
+            <h1>My Projects</h1>
             <hr></hr>
             <p>
                 {blurb.find(l => l.language === props.language)?.content}

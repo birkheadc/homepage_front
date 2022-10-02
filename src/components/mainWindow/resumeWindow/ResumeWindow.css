@@ -1,8 +1,53 @@
 .resume-window-wrapper {
-  padding-top: 3rem;
+  width: 100%;
+}
+
+.resume-pdf-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.resume-body p {
+  text-align: justify;
+  font-size: 0.9rem;
+  padding: 0 1em;
+}
+
+.resume-body h3 {
+  font-size: 2rem;
+}
+
+.resume-body h4{
+  font-size: 1rem;
+}
+
+.resume-body h5 {
+  font-size: 0.8rem;
+}
+
+.resume-body section {
+  border-style: solid;
+  border-width: 3px 0;
+  border-radius: 1em;
+
+  padding: 1em 1em 2em 1em;
+  margin: 1em 0;
+}
+
+.resume-body ul {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.resume-body li {
+  font-size: 0.7rem;
   text-align: center;
 }
 
-.resume-window-wrapper a {
-  font-size: 2rem;
+.resume-body-list {
+  padding: 0.5em 0;
+  gap: 0.5em;
 }

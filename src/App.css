@@ -1,14 +1,14 @@
 /* main link font */
-@import url('https://fonts.googleapis.com/css?family=Lato');
+/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
 
 /* header font */
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+/* @import url('https://fonts.googleapis.com/css?family=Oswald'); */
 
 /* navbar font */
-@import url('https://fonts.googleapis.com/css?family=Barriecito');
+/* @import url('https://fonts.googleapis.com/css?family=Barriecito'); */
 
 /* main text font */
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+/* @import url('https://fonts.googleapis.com/css?family=Titillium+Web'); */
 
 
 :root {
@@ -21,7 +21,7 @@
   --clr-bg-secondary-light: #FAFAFF;
 
   --clr-primary-dark: #C73A6B;
-  --clr-primary-light: #D8CCB9;
+  --clr-primary-light: #bdaf98;
   --clr-secondary-dark: #057694;
   --clr-secondary-light: #BCBE52;
 
@@ -51,6 +51,11 @@
 
   --img-bg-dark-mobile: linear-gradient(180deg, transparent 0%, var(--clr-bg-primary) 20%), url('../public/background/background_h.jpg');
   --img-bg-light-mobile: linear-gradient(180deg, transparent 0%, var(--clr-bg-primary) 20%), url('../public/background/background_l.jpg');
+
+  --font-h: 'Oswald', sans-serif;
+  --font-a: 'Dangrek', cursive;
+  --font-main: 'Murecho', sans-serif;
+  --font-main-jp: 'Noto Sans JP', sans-serif;
 
   font-size: 1.25rem;
 }
@@ -99,7 +104,6 @@
   --img-bg: var(--img-bg-dark);
 }
 
-
 html, body, nav, main, ul, h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0;
@@ -117,7 +121,6 @@ hr {
 a {
   text-decoration: none;
   color: var(--clr-primary);
-  font-family: 'Lato', sans-serif;
 }
 
 a:hover,
@@ -137,11 +140,16 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: var(--font-main);
+}
+
+html[lang=jp] {
+  font-family: var(--font-main-jp);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
   color: var(--clr-accent);
+  font-family: var(--font-h);
   text-align: center;
 }
 
@@ -166,7 +174,7 @@ h5 {
 }
 
 p {
-  font-family: 'Titillium Web', sans-serif;
+  
 }
 
 .left-column-wrapper {

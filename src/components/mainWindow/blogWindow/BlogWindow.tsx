@@ -36,12 +36,12 @@ function BlogWindow(props: BlogWindowProps) {
 
   return (
     <div className='blog-window-wrapper'>
-      <h1>MY BLOG</h1>
+      <h1>My Blog</h1>
       <hr></hr>
       <div className='blog-window-body'>
         <a className='nav-link' href='https://blog.birkheadc.me' target='_blank' rel='noreferrer'>Read More</a>
         {getBlurbs()}
-        <a className='nav-link' href='https://blog.birkheadc.me' target='_blank' rel='noreferrer'>Read More</a>\
+        <a className='nav-link' href='https://blog.birkheadc.me' target='_blank' rel='noreferrer'>Read More</a>
       </div>
     </div>
   );

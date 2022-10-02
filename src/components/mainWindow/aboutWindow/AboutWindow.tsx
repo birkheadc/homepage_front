@@ -21,7 +21,7 @@ function AboutWindow(props: AboutWindowProps) {
 
     return (
         <div>
-            <h1>ABOUT ME</h1>
+            <h1>About Me</h1>
             <hr></hr>
             {getContent()}
         </div>
