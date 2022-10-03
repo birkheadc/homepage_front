@@ -62,7 +62,7 @@
 }
 
 .projects-preview-links-wrapper a {
-    font-family: 'Barriecito', serif;
+    font-family: var(--font-a);
 }
 
 .projects-preview-technologies-wrapper {
