@@ -1,8 +1,12 @@
 # build environment
 FROM node:18-alpine3.15 as build
 WORKDIR /app
+ARG PROJECTS_URL
+ARG BLOG_URL
 ENV PATH /app/node_modules/.bin:$PATH
-ENV REACT_APP_PROJECTS_URL https://projects.birkheadc.me
+
+ENV REACT_APP_PROJECTS_URL=${PROJECTS_URL}
+ENV REACT_APP_BLOG_URL=${BLOG_URL}
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm ci

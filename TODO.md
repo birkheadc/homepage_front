@@ -11,3 +11,5 @@
 - Fix theme not working in mobile
 
 - Make technologies list on projects page 2 columns
+
+- Add animation to mobile menu opening, keep button to close menu

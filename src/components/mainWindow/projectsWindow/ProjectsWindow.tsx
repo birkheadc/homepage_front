@@ -42,7 +42,7 @@ function ProjectsWindow(props: ProjectsWindowProps) {
                                 </h2>
                                 <a className='projects-window-source-link' href={project.source}>(source)</a>
                             </div>
-                            <ul>
+                            <ul className='project-technologies-list'>
                                 {project.technologies.map(
                                     tech =>
                                     <li key={tech}>{tech.toUpperCase()}</li>

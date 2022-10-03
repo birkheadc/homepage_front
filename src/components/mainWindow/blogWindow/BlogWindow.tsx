@@ -21,14 +21,14 @@ function BlogWindow(props: BlogWindowProps) {
     }
 
     return (
-      <div>
+      <div className='blog-window-blurbs-wrapper'>
         {props.blurbs.map(
           blurb => 
-          <div className='blurbs-window-individual-wrapper' key={blurb.id}>
-            <h4><a href={process.env.REACT_APP_BLOG_URL ? process.env.REACT_APP_BLOG_URL + '/articles/' + blurb.id : '#'}>{blurb.title}</a></h4>
+          <section key={blurb.id}>
+            <h2><a href={process.env.REACT_APP_BLOG_URL ? process.env.REACT_APP_BLOG_URL + '/articles/' + blurb.id : '#'}>{blurb.title}</a></h2>
             <p>{blurb.sub_title}</p>
             <p className='blurb-date'>{blurb.created.toString().substring(0, 10)}</p>
-          </div>
+          </section>
         )}
       </div>
     );

@@ -36,23 +36,39 @@
 }
 
 .projects-window-wrapper section {
-    background-color: var(--clr-bg-secondary);
-    padding: 1em;
+    border-style: outset;
+    border-width: 3px 0;
+    border-radius: 0.5em;
 
-    border-radius: 1rem;
-
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--clr-accent);
+    padding: 1em 1em 2em 1em;
 
     /* box-shadow: 5px 5px; */
+}
+
+.project-technologies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project-technologies-list>li {
+  flex-basis: 40%;
 }
 
 .projects-window-head {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    justify-content: space-between;
     align-items: baseline;
+}
+
+.projects-window-head a {
+  font-family: var(--font-h);
+}
+
+.projects-window-head h2 {
+  font-size: 1.5rem;
 }
 
 .projects-window-title-link {

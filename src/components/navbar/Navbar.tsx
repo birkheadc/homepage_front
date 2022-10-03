@@ -173,7 +173,7 @@ function Navbar(props: NavbarProps) {
           <li><NavLink data-dropdown='blogsPreview' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onClick={handleToggleNav} onMouseOver={handleChangeDropdown} to='/blog'>{getLinkLabel('Blog')}</NavLink></li>
           <li><NavLink data-dropdown='projectsPreview' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onClick={handleToggleNav} onMouseOver={handleChangeDropdown} to='/projects'>{getLinkLabel('Projects')}</NavLink></li>
           <li><NavLink data-dropdown='contactMe' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onClick={handleToggleNav} onMouseOver={handleChangeDropdown} to='/contact'>{getLinkLabel('Contact')}</NavLink></li>
-          <li><NavLink data-dropdown='' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onClick={handleToggleNav} onMouseOver={handleChangeDropdown} to='/resume'>{getLinkLabel('Résumé')}</NavLink></li>
+          <li><NavLink data-dropdown='' className={({ isActive }) => (isActive ? 'nav-link active-nav-link' : 'nav-link')} onClick={handleToggleNav} onMouseOver={handleChangeDropdown} to='/resume'>{getLinkLabel('Resume')}</NavLink></li>
           <button className='change-theme-button' onClick={props.handleChangeTheme} title='Change Theme'>{getThemeButtonIcon(props.theme)}</button>
           <div className='change-language-wrapper'>
             <i className="fa-solid fa-globe"></i>

@@ -14,7 +14,7 @@ function ResumeWindow(props: ResumeWindowProps) {
 
   return (
     <div className='resume-window-wrapper'>
-      <h1>Résumé</h1>
+      <h1>Resume</h1>
       <hr></hr>
       <a className='resume-pdf-link' href='/resume/resume_en_swe.pdf' target='_blank' rel='noreferrer'>View Printable PDF</a>
       <div className='resume-body'>

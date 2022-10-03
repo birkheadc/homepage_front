@@ -21,29 +21,28 @@
   gap: 0.5rem;
 }
 
-.blurbs-window-individual-wrapper a {
-  font-family: var(--font-main);
+.blog-window-blurbs-wrapper a {
+  font-family: var(--font-h);
   font-size: 1.5rem;
   text-decoration: underline;
 }
 
-.blurbs-window-individual-wrapper h4 {
+.blog-window-body h2 {
   text-align: left;
 }
 
-.blurbs-window-individual-wrapper {
+.blog-window-body section {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  background-color: var(--clr-bg-secondary);
-
 
   padding: 0.5em 1em;
 
-  border-radius: 1em;
-  border-style: solid;
-  border-width: 3px;
-  border-color: var(--clr-accent);
+  border-style: outset;
+  border-width: 3px 0;
+  border-radius: 0.5em;
+
+  padding: 1em 1em 2em 1em;
 }
 
 .blurbs-window-individual-wrapper p {
